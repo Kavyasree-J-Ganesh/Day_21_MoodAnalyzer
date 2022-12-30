@@ -15,5 +15,12 @@ public class MoodAnalyzerMain {
         message = scan.nextLine();
         MoodAnalyzer moodAnalyzer2 = new MoodAnalyzer(message);
         moodAnalyzer2.analyseMood();
+
+        // NULL case
+        System.out.println("OUTPUT For message as NULL");
+        System.out.println("__________________________");
+        MoodAnalyzer moodAnalyzer3 = new MoodAnalyzer(null);
+        moodAnalyzer2.analyseMood();
+
     }
 }

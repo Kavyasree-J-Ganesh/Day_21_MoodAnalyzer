@@ -14,5 +14,12 @@ public class MoodAnalyzerTest {
         moodAnalyzer = new MoodAnalyzer("I am in Happy Mood");
         result = moodAnalyzer.analyseMood();
         Assertions.assertEquals(result,"HAPPY");
+
+        // should return HAPPY for null message
+
+        moodAnalyzer = new MoodAnalyzer(null);
+        result = moodAnalyzer.analyseMood();
+        Assertions.assertEquals(result,"HAPPY");
+
     }
 }
