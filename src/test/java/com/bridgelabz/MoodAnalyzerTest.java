@@ -5,18 +5,14 @@ import org.junit.jupiter.api.*;
 public class MoodAnalyzerTest {
     static MoodAnalyzer moodAnalyzer;
 
-    @BeforeAll
-    static void init() {
-        System.out.println("Before All");
-        moodAnalyzer = new MoodAnalyzer();
-    }
-
     @Test
     public void testAnalyseMood(){
-        String result = moodAnalyzer.analyseMood("I am in Sad Mood");
+        moodAnalyzer = new MoodAnalyzer("I am in Sad Mood");
+        String result = moodAnalyzer.analyseMood();
         Assertions.assertEquals(result,"SAD");
 
-        result = moodAnalyzer.analyseMood("In Happy mood");
+        moodAnalyzer = new MoodAnalyzer("I am in Happy Mood");
+        result = moodAnalyzer.analyseMood();
         Assertions.assertEquals(result,"HAPPY");
     }
 }
